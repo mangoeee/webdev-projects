@@ -1,26 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Ubuntu:wght@400;700&display=swap');
+
 * {
     margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --dark-orange: rgba(244, 82, 59, 1);
+    --bg-orange: rgba(250, 114, 73, 1);
+    --poke-entry: rgba(219, 219, 217, 1);
 }
 
 .art {
-    background-color: rgba(244, 82, 59, 1);
-    padding: 150px;
+    background-color: var(--dark-orange);
+    padding: 350px 100px;
     position: fixed;
-    rotate: 45deg;
-    translate: -160px -160px;
+    rotate: 10deg;
+    translate: -150px -45px;
+    animation-name: makemove;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes makemove {
+    0% {
+        translate: -150px -45px;
+    }
+    50% {
+        translate: -150px -75px;
+    }
+    100% {
+        translate: -150px -45px;
+    }
+}
+
+.art2 {
+    background-color: var(--poke-entry);
+    padding: 350px 100px;
+    position: fixed;
+    rotate: 10deg;
+    translate: -220px -45px;
+    animation-name: makemove2;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes makemove2 {
+    0% {
+        translate: -220px -45px;
+    }
+    50% {
+        translate: -220px -85px;
+    }
+    100% {
+        translate: -220px -45px;
+    }
 }
 
 .container {
-    background-color: rgba(250, 114, 73, 1);
+    background-color: var(--bg-orange);
     min-width: 100%;
     height: 100vh;
-    overflow-y: hidden;
     overflow-x: hidden;
 }
 
 .header {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .top {
@@ -31,19 +80,60 @@
     margin-top: 25px;
     padding-left: 100px;
     padding-right: 100px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    z-index: 5;
+}
+
+#searchInput {
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.sprite {
+    margin-left: 25px;
+    z-index: 5;
 }
 
 .header .name {
     padding: 10px;
     letter-spacing: 1.5px;
+    font-size: x-large;
 }
 
-.sprite {
-    margin-left: 100px;
+.info { 
+    justify-content: center;
 }
 
-.info .sprite a .img {
-    max-width: 50%;
+.info .sprite img{
+    max-width: 90%;
+}
+
+@keyframes makebig {
+    0% {
+        max-width: 90%;
+    }
+    50% {
+        max-width: 95%;
+    }
+    100% {
+        max-width: 90%;
+    } 
+}
+
+.info .sprite img:hover {
+    animation-name: makebig;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    max-width: 90%;
+}
+
+.bigbox {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    z-index: 5;
 }
 
 .box {
@@ -51,13 +141,14 @@
     flex-direction: column;
     gap: 2px;
     background-color: #fff;
-    margin: 30px 50px 30px 110px;
+    margin: 30px 25px 0 0;
     padding: 20px;
+    border-radius: 20px;
 }
 
 .classification {
     text-align: center;
-    background-color: rgba(219, 219, 217, 1);
+    background-color: var(--poke-entry);
 }
 
 .info {
@@ -65,12 +156,67 @@
 }
 
 .classification {
-    margin-bottom: 5px;
+    padding: 10px 0 10px;
+    letter-spacing: 1.5px;
 }
 
 .info .desc {
     display: flex;
+    flex: 1;
     align-items: center;
     justify-content: space-around;
-    background-color: rgba(219, 219, 217, 1);
+    padding: 10px 0px 10px;
+}
+
+.item {
+    flex: 1;
+}
+
+.item.selector {
+    padding: 10px;
+    background-color: var(--poke-entry);
+    text-align: center;
+}
+
+.item p {
+    padding-left: 15px;
+}
+
+.entry {
+    margin-top: 10px;
+    margin-right: 25px;
+    padding: 20px 30px 20px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    * {
+        margin: 0;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        justify-content: center;
+        align-items: center;
+        /* margin-top: -70px; */
+    }
+    
+    .sprite {
+        margin: 0;
+    }
+
+    .bigbox {
+        margin: 0 20px 20px 20px;
+    }
+
+    .box {
+        margin: 0;
+    }
+
+    .entry {
+        margin-right: 0;
+    }
 }

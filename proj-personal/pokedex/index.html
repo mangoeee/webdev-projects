@@ -8,32 +8,38 @@
     <title>Emery's Pokédex</title>
 </head>
 <body>
+    <div class="art"></div>
+    <div class="art2"></div>
     <div class="container">
-        <div class="art"></div>
         <div class="header">
             <div class="top">
                 <div class="name">Pikachu</div>
+            </div>
+            <div class="search">
+                <input type="text" id="searchInput" placeholder="Search..">
             </div>
         </div>
         <div class="info">
             <div class="sprite">
                 <img src="https://img.pokemondb.net/sprites/scarlet-violet/normal/pikachu.png" alt="Pikachu">
             </div>
-            <div class="box">
-                <div class="classification">
-                    <p>Mouse Pokémon</p>
-                </div>
-                <div class="desc type">
-                    <h4>Type</h4>
-                    <p>Electric</p>
-                </div>
-                <div class="desc height">
-                    <h4>Height</h4>
-                    <p>1'04"</p>
-                </div>
-                <div class="desc weight">
-                    <h4>Weight</h4>
-                    <p>13.2lbs</p>
+            <div class="bigbox">
+                <div class="box">
+                    <div class="classification">
+                        <p>Mouse Pokémon</p>
+                    </div>
+                    <div class="desc type">
+                        <div class="item selector"><h4>Type</h4></div>
+                        <div class="item"><p>Electric</p></div>
+                    </div>
+                    <div class="desc height">
+                        <div class="item selector"><h4>Height</h4></div>
+                        <div class="item"><p>1'04"</p></div>
+                    </div>
+                    <div class="desc weight">
+                        <div class="item selector"><h4>Weight</h4></div>
+                        <div class="item"><p>13.2lbs</p></div>
+                    </div>
                 </div>
                 <div class="entry">
                     <p>When several of these Pokémon gather, their electricity can build and cause lightning storms.</p>
