@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Pokédex</title>
 </head>
 <body>
@@ -13,36 +16,39 @@
     <div class="container">
         <div class="header">
             <div class="top">
-                <div class="name" id="name">Pikachu</div>
+                <div class="name" id="update_name">Pokédex</div>
             </div>
             <div class="search">
                 <input type="search" id="searchInput" placeholder="Search..">
+            </div>
+            <div id="error" class="hidden">
+                Who's that Pokémon? We don't know!
             </div>
         </div>
         <div class="info">
             <div class="sprite">
                 <img id="sprite" alt=" missing pokemon" src="./missingno.png">
             </div>
-            <!-- <div class="bigbox">
+            <div class="bigbox">
                 <div class="box">
-                    <div class="classification">
+                    <!-- <div class="classification">
                         <p>Mouse Pokémon</p>
-                    </div>
+                    </div> -->
                     <div class="desc type">
                         <div class="item selector"><h4>Type</h4></div>
-                        <div class="item"><p>Electric</p></div>
+                        <div class="item"><p id="update_type"></p></div>
                     </div>
                     <div class="desc height">
                         <div class="item selector"><h4>Height</h4></div>
-                        <div class="item"><p>1'04"</p></div>
+                        <div class="item"><p id="update_height"></p></div>
                     </div>
                     <div class="desc weight">
                         <div class="item selector"><h4>Weight</h4></div>
-                        <div class="item"><p>13.2lbs</p></div>
+                        <div class="item"><p id="update_weight"></p></div>
                     </div>
                 </div>
-                <div class="entry">
-                    <p>When several of these Pokémon gather, their electricity can build and cause lightning storms.</p>
+                <!-- <div class="entry">
+                    <p id="update_entry">When several of these Pokémon gather, their electricity can build and cause lightning storms.</p>
                 </div> -->
             </div>
         </div>

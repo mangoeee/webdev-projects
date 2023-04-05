@@ -59,6 +59,10 @@
     }
 }
 
+#update_name, #update_type {
+    text-transform: capitalize;
+}
+
 .container {
     background-color: var(--bg-orange);
     min-width: 100%;
@@ -88,6 +92,11 @@
 #searchInput {
     padding: 10px;
     border-radius: 20px;
+}
+
+.hidden {
+    opacity: 0;
+    display: none;
 }
 
 .sprite {
@@ -188,6 +197,11 @@
     padding: 20px 30px 20px;
     background-color: #fff;
     border-radius: 20px;
+}
+
+.entry p {
+    margin: 0;
+    text-transform: none;
 }
 
 @media screen and (max-width: 768px) {
