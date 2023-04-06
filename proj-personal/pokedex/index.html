@@ -18,11 +18,16 @@
             <div class="top">
                 <div class="name" id="update_name">Pokédex</div>
             </div>
-            <div class="search">
-                <input type="search" id="searchInput" placeholder="Search..">
+            <div class="input-group search">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search the Pokédex..">
+                <div class="input-group-append">
+                  <button onclick="getPokemon()" class="btn btn-dark" type="button" id="btn">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </div>
             </div>
             <div id="error" class="hidden">
-                Who's that Pokémon? We don't know!
+                Sorry, that Pokémon is not available in Scarlet & Violet
             </div>
         </div>
         <div class="info">
@@ -31,9 +36,9 @@
             </div>
             <div class="bigbox">
                 <div class="box">
-                    <!-- <div class="classification">
-                        <p>Mouse Pokémon</p>
-                    </div> -->
+                    <div class="classification">
+                        <p id="update_species">Species not found.</p>
+                    </div>
                     <div class="desc type">
                         <div class="item selector"><h4>Type</h4></div>
                         <div class="item"><p id="update_type"></p></div>
@@ -47,9 +52,9 @@
                         <div class="item"><p id="update_weight"></p></div>
                     </div>
                 </div>
-                <!-- <div class="entry">
-                    <p id="update_entry">When several of these Pokémon gather, their electricity can build and cause lightning storms.</p>
-                </div> -->
+                <div class="entry">
+                    <p id="update_entry">Pokédex entry not found.</p>
+                </div>
             </div>
         </div>
     </div>

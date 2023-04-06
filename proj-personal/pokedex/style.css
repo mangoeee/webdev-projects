@@ -90,8 +90,19 @@
 }
 
 #searchInput {
+    max-width: 250px;
     padding: 10px;
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.input-group {
+    justify-content: center;
+}
+
+.input-group>.input-group-append>.btn {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .hidden {
@@ -139,7 +150,7 @@
 }
 
 .bigbox {
-    display: flex;
+    display: none;
     flex-direction: column;
     margin-left: 10px;
     z-index: 5;
@@ -158,15 +169,14 @@
 .classification {
     text-align: center;
     background-color: var(--poke-entry);
+    border-radius: 20px;
+    padding: 10px 0 10px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
 }
 
 .info {
     display: flex;
-}
-
-.classification {
-    padding: 10px 0 10px;
-    letter-spacing: 1.5px;
 }
 
 .info .desc {
@@ -187,6 +197,10 @@
     text-align: center;
 }
 
+.item.selector h4 {
+    margin: 0;
+}
+
 .item p {
     padding-left: 15px;
 }
@@ -202,6 +216,18 @@
 .entry p {
     margin: 0;
     text-transform: none;
+}
+
+.item.selector h4 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+#update_species,
+#update_type,
+#update_height,
+#update_weight {
+    margin: 0;
 }
 
 @media screen and (max-width: 768px) {
